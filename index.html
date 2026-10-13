@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hospital Management System</h1>
+      <p>Manage patients, doctors, and appointments in one place.</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Register Patient</h2>
+        <form id="patient-form">
+          <label for="patient-name">Name</label>
+          <input id="patient-name" name="name" type="text" required />
+
+          <label for="patient-age">Age</label>
+          <input id="patient-age" name="age" type="number" min="0" required />
+
+          <label for="patient-gender">Gender</label>
+          <select id="patient-gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="patient-contact">Contact Number</label>
+          <input id="patient-contact" name="contact" type="tel" required />
+
+          <button type="submit">Add Patient</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Schedule Appointment</h2>
+        <form id="appointment-form">
+          <label for="appointment-patient">Patient</label>
+          <select id="appointment-patient" name="patient" required>
+            <option value="">Select patient</option>
+          </select>
+
+          <label for="appointment-doctor">Doctor</label>
+          <select id="appointment-doctor" name="doctor" required>
+            <option value="">Select doctor</option>
+          </select>
+
+          <label for="appointment-date">Date</label>
+          <input id="appointment-date" name="date" type="date" required />
+
+          <button type="submit">Book Appointment</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Doctors</h2>
+        <ul id="doctor-list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Patients</h2>
+        <ul id="patient-list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Appointments</h2>
+        <ul id="appointment-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
